@@ -39,12 +39,73 @@ ul {
   margin: 0;
   padding: 0;
 }
+h5, h3 {
+  color: red
+}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+  $(".navbar-brand").hover(function() {
+    $(this).css({
+      "color": "blue",
+      "text-decoration": "underline"
+    });
+  }, function() {
+    $(this).css({
+      "color": "black",
+      "text-decoration": "none"
+    });
+  });
+});
+  $(document).ready(function() {
+    $("#nav1").hover(function() {
+      $(this).css({
+        "color": "blue",
+        "text-decoration": "underline"
+      });
+    }, function() {
+      $(this).css({
+        "color": "white",
+        "text-decoration": "none"
+      });
+    });
+  });
+  $(document).ready(function() {
+  $(".card-img, .card-title, p").hide();
+
+  $("h5").click(function() {
+    $(".card-img, .card-title, p").fadeToggle(); 
+
+    });
+  });
+  $(document).ready(function() {
+  $("#rad").hide();
+
+  $("#gender").click(function() {
+    $("#rad").fadeToggle(); 
+
+    });
+  });
+    $(document).ready(function() {
+    $("h5, #gender").hover(function() {
+      $(this).css({
+        "color": "blue",
+        "text-decoration": "underline"
+      });
+    }, function() {
+      $(this).css({
+        "color": "red",
+        "text-decoration": "none"
+      });
+    });
+  });
+</script>
 </head>
 <body>
 <nav class="navbar bg-body-tertiary" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Farrell Sevillen Arya</a>
+      <a id="nav1" class="navbar-brand" href="index.html">Farrell Sevillen Arya</a>
     </div>
   </nav>
   <nav class="navbar bg-body-tertiary">
@@ -64,7 +125,7 @@ ul {
   </nav>
   <div class="leftside">
     <div class="card" style="width: 100%;">
-        <img src="profile.jpg" class="card-img-top" alt="..." max-width="100%">
+        <img src="profile.jpg" class="card-img" alt="..." max-width="100%">
         <div class="card-body">
           <h3 class="card-title">Farrell Sevillen Arya</h3>
           <h5>About Me</h5>
@@ -75,12 +136,13 @@ ul {
       <div class="rightside">
         <div class="card" style="width: 100%;">
             <div class="card-body">
-                <h3>Gender</h3>
+                <h3 id="gender">Gender</h3>
+                <div id="rad">
                 <fieldset>
-                <legend>Gender</legend>
                 <label><input type="radio" id="Male" name="Gender" value="Male" checked>Male</label>
                 <label><input type="radio" id="Female" name="Gender" value="Female" disabled>Female</label>
                 </fieldset>
+              </div>
           </div>
           </div>
           </div>

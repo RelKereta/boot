@@ -5,10 +5,82 @@
     <title>Farrell Sevillen Arya Assignment 1 </title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+      $(".navbar-brand").hover(function() {
+        $(this).css({
+          "color": "blue",
+          "text-decoration": "underline"
+        });
+      }, function() {
+        $(this).css({
+          "color": "black",
+          "text-decoration": "none"
+        });
+      });
+    });
+      $(document).ready(function() {
+        $("#nav1").hover(function() {
+          $(this).css({
+            "color": "blue",
+            "text-decoration": "underline"
+          });
+        }, function() {
+          $(this).css({
+            "color": "white",
+            "text-decoration": "none"
+          });
+        });
+      });
+      $(document).ready(function() {
+      $("#gun, #bod1").hide();
+    
+      $("#tit1").click(function() {
+        $("#gun, #bod1").fadeToggle(); 
+    
+        });
+      });
+      $(document).ready(function() {
+      $("#bod2, #foot").hide();
+    
+      $("#tit2").click(function() {
+        $("#bod2, #foot").fadeToggle(); 
+    
+        });
+      });
+      $(document).ready(function() {
+      $("#rad").hide();
+    
+      $("#inter").click(function() {
+        $("#rad").fadeToggle(); 
+    
+        });
+      });
+        $(document).ready(function() {
+        $(".card-title, #inter").hover(function() {
+          $(this).css({
+            "color": "blue",
+            "text-decoration": "underline"
+          });
+        }, function() {
+          $(this).css({
+            "color": "red",
+            "text-decoration": "none"
+          });
+        });
+      });
+    </script>
+    <style>
+      .card-title, #inter {
+        color: red
+      }
+  </style>
+  </head>  
+  <body>
   <nav class="navbar bg-body-tertiary" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Farrell Sevillen Arya</a>
+      <a class="navbar-brand" href="index.html" id="nav1">Farrell Sevillen Arya</a>
     </div>
   </nav>
   <nav class="navbar bg-body-tertiary">
@@ -31,12 +103,12 @@
     <div class="card mb-3" >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="gundam.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="gundam.jpg" class="img-fluid rounded-start" alt="..." id="gun">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Building Model Kits</h5>
-              <p class="card-text">I have always enjoyed building plastic model kits since a young age. I enjoy the process of building the model kit and admiring the finished product.</p>
+              <h5 class="card-title" id="tit1">Building Model Kits</h5>
+              <p class="card-text" id="bod1">I have always enjoyed building plastic model kits since a young age. I enjoy the process of building the model kit and admiring the finished product.</p>
             </div>
           </div>
         </div>
@@ -45,12 +117,12 @@
         <div class="card mb-3" >
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="footy.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="footy.jpg" class="img-fluid rounded-start" alt="..." id="foot">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Football</h5>
-                  <p class="card-text">Football is one of the hobbies that I enjoy doing.</p>
+                  <h5 class="card-title" id="tit2">Football</h5>
+                  <p class="card-text" id="bod2">Football is one of the hobbies that I enjoy doing.</p>
                 </div>
               </div>
             </div>
@@ -58,18 +130,15 @@
         </div>
           <div class="rightside">
             <div class="card mb-3" >
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="controller.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Gaming</h5>
-                      <p class="card-text">For me gaming has always been a way for me to relieve my stress and waste time.</p>
-                    </div>
-                  </div>
+              <div class="card-body">
+                  <h3 id="inter">Interests</h3>
+                  <div id="rad">
+                  <fieldset>
+                  <label><input type="radio"  value="Painting" checked>Painting</label>
+                  <label><input type="radio"  value="Racing" checked>Racing</label>
+                  </fieldset>
                 </div>
-              </div>
+            </div>
             </div>
           </div>
 
